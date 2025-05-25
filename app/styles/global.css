@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -11,60 +12,29 @@ html, body {
 }
 
 .background-global {
-  background: linear-gradient(
-    to bottom,
-    #000000 0%,
-    #1a0026 50%,
-    #4a004a 100%  
-  );
   height: 100vh;
   width: 100vw;
   position: relative;
-  z-index: 0;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-.background-global::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background-image:
-    radial-gradient(circle at 10% 20%, rgba(255,255,255,0.8) 1.8px, transparent 1.8px),
-    radial-gradient(circle at 30% 40%, rgba(255,255,255,0.9) 2.2px, transparent 2.2px),
-    radial-gradient(circle at 50% 10%, rgba(255,255,255,0.85) 2px, transparent 2px),
-    radial-gradient(circle at 70% 30%, rgba(255,255,255,0.95) 2.5px, transparent 2.5px),
-    radial-gradient(circle at 90% 20%, rgba(255,255,255,0.8) 1.8px, transparent 1.8px),
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.9) 2.2px, transparent 2.2px),
-    radial-gradient(circle at 40% 10%, rgba(255,255,255,0.85) 2px, transparent 2px),
-    radial-gradient(circle at 60% 40%, rgba(255,255,255,0.95) 2.5px, transparent 2.5px),
-    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.8) 1.8px, transparent 1.8px);
-  background-size: 400px 400px;
-  background-position: 0% 0%;
-  background-repeat: repeat;
-  animation: twinklePulse 4s ease-in-out infinite alternate; 
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
 }
 
-@keyframes twinklePulse {
-  0% {
-    opacity: 0.5; 
-    filter: brightness(1) blur(0px);
-  }
-  50% {
-    opacity: 1; 
-    filter: brightness(1.5) blur(1px); 
-  }
-  100% {
-    opacity: 0.5;
-    filter: brightness(1) blur(0px);
-  }
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
 }
 
-.background-global > * {
-  position: relative;
-  z-index: 2; 
+*::-webkit-scrollbar-thumb {
+  background-color: #6ff;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: background-color 0.3s ease;
 }
+
