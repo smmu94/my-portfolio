@@ -1,2 +1,1 @@
-// ✅ Usa require si no usas Babel
-require("@testing-library/jest-dom");
+import "@testing-library/jest-dom";
