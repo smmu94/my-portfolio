@@ -2,13 +2,13 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Carousel from ".";
 
 jest.mock("public/svgs/chevron_left.svg", () => {
-  const ChevronLeft = () => <svg data-testid="chevron-left" />;
+  const ChevronLeft = () => <svg />;
   ChevronLeft.displayName = "ChevronLeft";
   return ChevronLeft;
 });
 
 jest.mock("public/svgs/chevron_right.svg", () => {
-  const ChevronRight = () => <svg data-testid="chevron-right" />;
+  const ChevronRight = () => <svg />;
   ChevronRight.displayName = "ChevronRight";
   return ChevronRight;
 });
