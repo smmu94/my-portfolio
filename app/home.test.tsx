@@ -3,7 +3,7 @@ import { profile } from "./constants";
 import Home from "./page";
 
 describe("Home", () => {
-  it("renders default", () => {
+  it("render default", () => {
     render(<Home />);
     expect(screen.getByTestId("home")).toBeInTheDocument();
     expect(screen.getByRole("img", { name: "myself" })).toBeInTheDocument();
