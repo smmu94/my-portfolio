@@ -24,8 +24,7 @@ export default function Projects() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-contain"
-                  priority={idx === 0}
+                  className="object-cover"
                 />
               </div>
               <div className="bg-light flex flex-col justify-between p-4 gap-2 w-full lg:w-1/2">

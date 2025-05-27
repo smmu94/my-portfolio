@@ -2,30 +2,6 @@ import { render, screen } from "@testing-library/react";
 import Navbar from ".";
 import { routes } from "./constants";
 
-jest.mock("public/svgs/arcade.svg", () => {
-  const HomeIcon = () => <svg />;
-  HomeIcon.displayName = "HomeIcon";
-  return HomeIcon;
-});
-
-jest.mock("public/svgs/computer.svg", () => {
-  const ExperienceIcon = () => <svg />;
-  ExperienceIcon.displayName = "ExperienceIcon";
-  return ExperienceIcon;
-});
-
-jest.mock("public/svgs/disquete.svg", () => {
-  const ProjectsIcon = () => <svg />;
-  ProjectsIcon.displayName = "ProjectsIcon";
-  return ProjectsIcon;
-});
-
-jest.mock("public/svgs/girl.svg", () => {
-  const AboutIcon = () => <svg />;
-  AboutIcon.displayName = "AboutIcon";
-  return AboutIcon;
-});
-
 describe("Navbar component", () => {
   it("renders all navigation icons", () => {
     render(<Navbar />);

@@ -1,18 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Carousel from ".";
 
-jest.mock("public/svgs/chevron_left.svg", () => {
-  const ChevronLeft = () => <svg />;
-  ChevronLeft.displayName = "ChevronLeft";
-  return ChevronLeft;
-});
-
-jest.mock("public/svgs/chevron_right.svg", () => {
-  const ChevronRight = () => <svg />;
-  ChevronRight.displayName = "ChevronRight";
-  return ChevronRight;
-});
-
 describe("Carousel", () => {
   beforeEach(() => {
     Object.defineProperty(window, "innerWidth", {

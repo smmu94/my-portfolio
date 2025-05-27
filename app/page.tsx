@@ -13,7 +13,6 @@ export default function Home() {
         width={300}
         height={300}
         className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80"
-        priority
       />
       <div
         className="text-center text-light p-4 md:p-8 lg:p-0"
