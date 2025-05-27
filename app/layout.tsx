@@ -4,6 +4,13 @@ import TopActionsBar from "./components/topActionsBar";
 import "./styles/global.css";
 import { press_start_2p } from "./utils/fonts";
 
+export const metadata = {
+  title: "Stephanie Morales",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">

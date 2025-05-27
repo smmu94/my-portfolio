@@ -15,7 +15,7 @@ export default function Home() {
         className="w-52 h-52 md:w-64 md:h-64 lg:w-80 lg:h-80"
       />
       <div
-        className="text-center text-light p-4 md:p-8 lg:p-0"
+        className="text-center text-light p-4 md:p-8 lg:p-12"
         data-testid="home-text"
       >
         <h1 className="text-xl md:text-3xl text-primary">{profile.name}</h1>
