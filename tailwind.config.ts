@@ -1,30 +1,27 @@
 /** @type {import("tailwindcss").Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 5s linear infinite",
+      },
       colors: {
-        "bg-dark": "#000000",
-        "bg-medium": "#1a0026",
-        "bg-light": "#4a004a",
-
-        "neon-pink": {
-          DEFAULT: "#FF00FF",
-          light: "#FF66FF",
-        },
-        "neon-blue": {
-          DEFAULT: "#00FFFF",
-          light: "#66FFFF",
-        },
-        "neon-white": "#FFFFFF",
+        primary: "#db2777",
+        "primary-light": "#fbcfe8",
+        secondary: "#6ff",
+        dark: "#000000",
+        light: "#ffffff",
+        "text-secondary": "#9ca3af",
       },
       boxShadow: {
-        "glow-pink": "0 0 15px rgba(255, 0, 255, 0.7), 0 0 30px rgba(255, 0, 255, 0.4)",
-        "glow-blue": "0 0 15px rgba(0, 255, 255, 0.7), 0 0 30px rgba(0, 255, 255, 0.4)",
+        neon: "0 0 20px #6ff, 0 0 40px #6ff",
+      },
+      backgroundImage: {
+        "hero-gradient":
+          "linear-gradient(to bottom, #000 0%, #000 60%, #3b001f 100%)",
       },
     },
   },
   plugins: [],
-}
+};
